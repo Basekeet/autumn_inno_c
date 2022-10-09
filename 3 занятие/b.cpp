@@ -3,7 +3,7 @@
 using namespace std;
 
 bool cmp(int a, int b) {
-    if (a % 10 <= b % 10) {
+    if (a % 10 < b % 10) {
         return true;
     } else {
         return false;
@@ -19,7 +19,7 @@ int main() {
         cin >> v[i];
     }    
 
-    sort(v, v + n, cmp);
+    stable_sort(v, v + n, cmp);
 
     for (auto el : v) {
         cout << el << " ";
